@@ -72,6 +72,10 @@ watch:
 
 tools:
 	go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+	go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
+
+generate:
+	sqlc generate
 
 # Migrate the database
 db-migrate: tools
